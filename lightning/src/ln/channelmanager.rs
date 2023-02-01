@@ -4486,7 +4486,7 @@ impl<M: Deref, T: Deref, K: Deref, F: Deref, L: Deref> ChannelManager<M, T, K, F
 	}
 
 	fn channel_monitor_updated(&self, funding_txo: &OutPoint, highest_applied_update_id: u64) {
-		let _persistence_guard = PersistenceNotifierGuard::notify_on_drop(&self.total_consistency_lock, &self.persistence_notifier);
+		//let _persistence_guard = PersistenceNotifierGuard::notify_on_drop(&self.total_consistency_lock, &self.persistence_notifier);
 
 		let htlc_forwards;
 		let (mut pending_failures, finalized_claims, counterparty_node_id) = {
